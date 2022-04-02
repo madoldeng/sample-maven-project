@@ -1,10 +1,9 @@
 pipeline {
     agent any
-    def pomfilepath=sample-maven-project/maven-archetype-quickstart/pom.xml
     stages {
-    stage('maven install ') {
+    stage('maven install') {
       steps {
-        withMaven {
+        withMaven(maven: 'maven3') {
           sh 'mvn clean install'
         }
       }
