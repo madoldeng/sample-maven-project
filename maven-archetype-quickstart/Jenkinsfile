@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    def pomfilepath=/var/lib/jenkins/workspace/test-maven-pipeline/maven-archetype-quickstart/pom.xml
     stages {
     stage('maven install') {
       steps {
